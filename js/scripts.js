@@ -46,7 +46,7 @@ function resetNumOfAddresses() {
 
 $(document).ready(function() {
   $("#add-address").click(function() {
-    $("#new-addresses").append('<div class="new-address">' +
+    var newAddress = $('<div class="new-address" style="display:none">' +
                                  '<div class="form-group">' +
                                    '<label for="new-street">Street</label>' +
                                    '<input type="text" class="form-control new-street">' +
@@ -63,7 +63,9 @@ $(document).ready(function() {
                                    '<label for="new-category">Category</label>' +
                                    '<input type="text" class="form-control new-category">' +
                                  '</div>' +
-                               '</div>');
+                               '</div>').hide();
+    $("#new-addresses").append(newAddress);
+    newAddress.slideDown(2000);
   });
 
 
