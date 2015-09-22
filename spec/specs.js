@@ -25,4 +25,10 @@ describe('Address', function() {
     var testAddress = new Address("123 Main St", "Test City","Test State", "Home");
     expect(testAddress.fullAddress()).to.equal("123 Main St, Test City, Test State, Home");
   });
+
+  // describe('resetNumOfAddresses', function() {
+  //   it("will remove all but one address field when resetting", function() {
+  //     expect()
+  //   })
+  // })
 });

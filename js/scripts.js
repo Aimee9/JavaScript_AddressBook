@@ -40,6 +40,10 @@ function resetFields() {
   $("input.new-category").val("");
 }
 
+function resetNumOfAddresses() {
+  $("div.new-address").not("div.new-address:nth-child(1)").remove();
+}
+
 $(document).ready(function() {
   $("#add-address").click(function() {
     $("#new-addresses").append('<div class="new-address">' +
@@ -99,6 +103,7 @@ $(document).ready(function() {
   });
 
   resetFields();
+  resetNumOfAddresses();
 }); // end of new-contact submit
 
 }); // end of document
