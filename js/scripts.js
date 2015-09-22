@@ -45,6 +45,7 @@ function resetNumOfAddresses() {
 }
 
 $(document).ready(function() {
+  // When a add address button is clicked, new address form fields slide down
   $("#add-address").click(function() {
     var newAddress = $('<div class="new-address" style="display:none">' +
                                  '<div class="form-group">' +
@@ -90,6 +91,15 @@ $(document).ready(function() {
 
 
   $("ul#contacts").append("<li><span class='contact'>" + newContact.fullName() + "</span></li>");
+
+  // Hover even handler
+  $("li").hover(
+    function() {
+      $(this).css("font-weight", "bold");
+    }, function() {
+      $(this).css("font-weight", "normal");
+    }
+  );
 
   $(".contact").last().click(function() {
     $("#show-contact").show();
